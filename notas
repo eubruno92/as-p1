@@ -1,0 +1,93 @@
+ Classe Abstrata Funcionario
+A classe Funcionario serve como uma base abstrata para outros tipos de funcionários. Ela não pode ser instanciada diretamente e define a estrutura comum que todos os funcionários devem seguir.
+
+Variáveis Públicas:
+
+Nome: Armazena o nome do funcionário.
+Matricula: Armazena a matrícula do funcionário.
+Projetos: Lista de projetos atribuídos ao funcionário.
+Construtor:
+
+Inicializa o nome e a matrícula do funcionário e cria uma nova lista de projetos.
+Métodos Abstratos:
+
+CalcularSalario(): Deve ser implementado nas classes derivadas para calcular o salário do funcionário.
+ExibirInformacoes(): Deve ser implementado nas classes derivadas para exibir as informações do funcionário.
+Métodos Sobrecarregados:
+
+AdicionarProjeto(string projeto): Adiciona um único projeto à lista de projetos.
+AdicionarProjeto(List<string> projetos): Adiciona uma lista de projetos à lista de projetos existente.
+2. Interface IBonus
+A interface IBonus define um contrato que as classes que implementam a interface devem seguir. No caso, ela declara o método CalcularBonus.
+
+Método:
+CalcularBonus(): Deve ser implementado nas classes que herdam a interface para calcular o bônus do funcionário.
+3. Classe FuncionarioTempoIntegral
+A classe FuncionarioTempoIntegral herda de Funcionario e implementa IBonus. Representa um funcionário que trabalha em tempo integral.
+
+Variável Privada:
+
+SalarioMensal: Armazena o salário mensal do funcionário.
+Construtor:
+
+Inicializa o nome, matrícula e salário mensal.
+Implementação dos Métodos Abstratos:
+
+CalcularSalario(): Retorna o salário mensal.
+ExibirInformacoes(): Exibe as informações do funcionário, incluindo o salário mensal.
+Implementação do Método da Interface:
+
+CalcularBonus(): Calcula e retorna 10% do salário mensal como bônus.
+4. Classe FuncionarioMeioPeriodo
+A classe FuncionarioMeioPeriodo herda de Funcionario e implementa IBonus. Representa um funcionário que trabalha em meio período.
+
+Variáveis Privadas:
+
+SalarioPorHora: Armazena o salário por hora do funcionário.
+HorasTrabalhadas: Armazena o número de horas trabalhadas pelo funcionário.
+Construtor:
+
+Inicializa o nome, matrícula, salário por hora e número de horas trabalhadas.
+Implementação dos Métodos Abstratos:
+
+CalcularSalario(): Calcula e retorna o salário total com base nas horas trabalhadas e no salário por hora.
+ExibirInformacoes(): Exibe as informações do funcionário, incluindo salário por hora e horas trabalhadas.
+Implementação do Método da Interface:
+
+CalcularBonus(): Calcula e retorna 5% do salário total como bônus.
+5. Classe Empresa
+A classe Empresa gerencia uma lista de funcionários.
+
+Variável Privada:
+
+funcionarios: Lista de funcionários da empresa.
+Construtor:
+
+Inicializa a lista de funcionários.
+Métodos:
+
+AdicionarFuncionario(Funcionario funcionario): Adiciona um funcionário à lista.
+RemoverFuncionario(int matricula): Remove um funcionário da lista com base na matrícula.
+ExibirFuncionarios(): Exibe as informações de todos os funcionários na lista.
+ObterFuncionario(int matricula): Retorna um funcionário da lista com base na matrícula.
+6. Classe Program
+A classe Program contém o método Main, que é o ponto de entrada do programa. Implementa um menu interativo para interagir com o usuário.
+
+Método Main:
+Cria uma instância da classe Empresa.
+Exibe um menu interativo com opções para adicionar, remover, exibir funcionários e adicionar projetos.
+Chama métodos da classe Empresa e classes de funcionários com base na escolha do usuário.
+Resumo do Fluxo:
+Inicialização: O programa inicializa a classe Empresa.
+Menu Interativo: Um menu é exibido para o usuário escolher entre adicionar/remover funcionários, exibir informações ou adicionar projetos.
+Adição de Funcionários: O usuário pode adicionar funcionários de tempo integral ou meio período.
+Remoção de Funcionários: O usuário pode remover funcionários com base na matrícula.
+Exibição de Informações: O usuário pode exibir informações de todos os funcionários.
+Adição de Projetos: O usuário pode adicionar projetos a um funcionário específico.
+Esta estrutura permite gerenciar funcionários de diferentes tipos, calcular salários e bônus específicos e armazenar informações de projetos atribuídos a cada funcionário.
+
+overwide é uma forma de escrita
+
+
+
+
